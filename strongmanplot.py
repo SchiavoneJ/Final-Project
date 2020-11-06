@@ -43,6 +43,7 @@ if __name__ == '__main__':
     df_total_points
     plt.bar(x=df_total_points['Heavy wheight Strongman'],
             height=df_total_points['Total points'])
+    plt.show()
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
