@@ -17,8 +17,8 @@ import datetime  # used for start/end times
 import argparse  # This gives better commandline argument functionality
 import doctest   # used for testing the code from docstring examples
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
+import numpy as np
 
 # Global Variables
 
@@ -40,10 +40,27 @@ if __name__ == '__main__':
 
     print("-------------------")
     df_total_points=pd.read_csv('input.csv')
-    df_total_points
+    #df_total_points
     plt.bar(x=df_total_points['Heavy wheight Strongman'],
             height=df_total_points['Total points'])
     plt.show()
+
+    #print("------------------")
+
+    #cols = [1,2,3,4,5,6]
+    #rows = [0,1,2,3,4,5]
+
+    #df =df.iloc[rows,cols].reset_index(drop=True)
+
+    #df.columns=['Heavy wheight Strongman', 'Log Clean and Press',
+     #           'Farmers Carry w/ Keg Carry', 'Deadlift', 'Yolk & Tire Flip',
+      #          'Stones of Steel over a Bar']
+    #for col in ['Log Clean and Press', 'Farmers Carry w/ Keg Carry', 'Deadlift',
+     #           'Yolk & Tire Flip', 'Stones of Steel over a Bar']:
+      #  df[col]=pd.to_numeric(df[col].str.replace('%',''))
+    
+    #display(df)
+    #print(df.dtypes)
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
