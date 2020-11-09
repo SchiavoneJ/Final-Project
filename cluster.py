@@ -56,12 +56,12 @@ if __name__ == '__main__':
     bar_width = 0.35
 
     fig, ax = plt.subplots()
-    barJordan = ax.bar(indx - bar_width/2, Jordan_means, bar_width, label='Jordan means')
-    barKealii = ax.bar(indx + bar_width/2, Kealii_means, bar_width, label='Kealii means')
-    barAndrew = ax.bar(indx + bar_width/2, Andrew_means, bar_width, label='Andrew means')
-    barGordon = ax.bar(indx + bar_width/2, Gordon_means, bar_width, label='Gordon means')
-    barRichard = ax.bar(indx + bar_width/2, Richard_means, bar_width, label='Richard means')
-    barZack = ax.bar(indx + bar_width/2, Zack_means, bar_width, label='Zack means')
+    barJordan = ax.bar(Jordan_means, bar_width, label='Jordan means')
+    barKealii = ax.bar(Kealii_means, bar_width, label='Kealii means')
+    barAndrew = ax.bar(Andrew_means, bar_width, label='Andrew means')
+    barGordon = ax.bar(Gordon_means, bar_width, label='Gordon means')
+    barRichard = ax.bar(Richard_means, bar_width, label='Richard means')
+    barZack = ax.bar(Zack_means, bar_width, label='Zack means')
 
     # inserting x axis label
     ax.set_xticks(indx)
