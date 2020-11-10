@@ -54,6 +54,12 @@ if __name__ == '__main__':
     Zack_means = list(dataset.T['Zack Bunke'])
 
     bar_width = 0.35
+    print(Jordan_means)
+    print(Kealii_means)
+    print(Andrew_means)
+    print(Gordon_means)
+    print(Richard_means)
+    print(Zack_means)
 
     fig, ax = plt.subplots()
     barJordan = ax.bar(Jordan_means, bar_width, label='Jordan means')
