@@ -5,31 +5,25 @@
 # CPTR 226 
 #
 # Author: Jared Schiavone
-# Date: 2020 November 4
+# Date: 2020 November 11
 # Version: 1.0
 # Course: CPTR 226
 # Assignment: 
-"""
+"""All graphs
 """
 
 # Includes
-import datetime  # used for start/end times
-import argparse  # This gives better commandline argument functionality
-import doctest   # used for testing the code from docstring examples
+import datetime     # used for start/end times
+import argparse     # This gives better commandline argument functionality
+import doctest      # used for testing the code from docstring examples
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-
+import ClusterGraph
+import strongmanplot
 # Global Variables
 
-
 # Functions
-def total():
-  df_total_points=pd.read_csv('input.csv')
-  #df_total_points
-  plt.bar(x=df_total_points['Heavy wheight Strongman'],
-          height=df_total_points['Total points'])
-  plt.show()
 
 # This runs if the file is run as a script vs included as a module
 if __name__ == '__main__':
@@ -43,6 +37,8 @@ if __name__ == '__main__':
         doctest.testmod(verbose=True)  # run the tests in verbose mode
 
     print("-------------------")
+    ClusterGraph.graph()
+    strongmanplot.total()
 
     end_time = datetime.datetime.now()    # save the script end time
     print(f'{__file__} took {end_time - start_time} s to complete')
