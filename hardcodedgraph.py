@@ -19,6 +19,7 @@ import doctest   # used for testing the code from docstring examples
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import pdb
 
 # Global Variables
 
@@ -26,10 +27,11 @@ import numpy as np
 # Functions
 def graph():
     df = pd.read_csv('input.csv')
-    subjects = ['Heavy wheight Strongman', 'Log Clean and Press',
-                'Farmers Carry w/ Keg Carry', 'Deadlift', 'Yolk & Tire Flip',
-                'Stones of Steel over a Bar']
-
+    subjects_all = list(df)
+    subjects = subjects_all[1:-1]
+    col_all = list(df)
+    col = col_all[2:-1]
+    print(col)
     dataset = df.groupby('Heavy wheight Strongman')[subjects].mean()
 
     # set width of bar
@@ -61,8 +63,7 @@ def graph():
 
     # Add xticks on the middle of the group bars
     plt.xlabel('GROUPS', fontweight='bold', fontsize='13')
-    plt.xticks([r + barWidth*2.5 for r in range(len(Jordan_means))], ['Log Clean and Press', 'Farmers Carry w/ Keg Carry', 'Deadlift',
-                                                                    'Yolk & Tire Flip', 'Stones of Steel over a Bar'], fontsize='13')
+    plt.xticks([r + barWidth*2.5 for r in range(len(Jordan_means))], col, fontsize='13')
     plt.ylabel('POINTS', fontweight='bold', fontsize='13')
 
     # Create legend & Show graphic
