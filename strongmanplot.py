@@ -9,7 +9,7 @@
 # Version: 1.0
 # Course: CPTR 226
 # Assignment: 
-"""
+"""total points graph
 """
 
 # Includes
